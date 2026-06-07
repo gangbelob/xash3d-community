@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XASH3D COMMUNITY | Android Mods Hub by MrArab</title>
     
-    <link class="favicon" rel="icon" type="image/x-icon" href="3a66aff309d35319563fa0b81887d58b.ico">
+    <link rel="icon" type="image/x-icon" href="3a66aff309d35319563fa0b81887d58b.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="3a66aff309d35319563fa0b81887d58b.ico">
 
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
@@ -164,6 +165,7 @@
         .nav-logo img {
             width: 30px;
             height: 30px;
+            /* Inverts colors nicely to match the orange theme header */
             filter: invert(56%) sepia(85%) saturate(1615%) hue-rotate(1deg) brightness(101%) contrast(103%);
         }
 
@@ -277,11 +279,23 @@
             border-radius: 8px;
             overflow: hidden;
             transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
             transform: translateY(-5px);
             border-color: var(--hl-orange);
+        }
+
+        /* Card Image Styling */
+        .card-banner-img {
+            width: 100%;
+            height: auto;
+            max-height: 150px;
+            object-fit: cover;
+            border-bottom: 1px solid #2d2d2d;
+            background-color: #000;
         }
 
         /* Hidden Class for Load More Functionality */
@@ -291,6 +305,10 @@
 
         .card-content {
             padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .card-title {
@@ -303,6 +321,10 @@
             color: var(--text-muted);
             font-size: 0.95rem;
             margin-bottom: 15px;
+        }
+
+        .card-tag-wrapper {
+            margin-top: auto;
         }
 
         .card-tag {
@@ -607,7 +629,9 @@
                     <div class="card-content">
                         <h3 class="card-title">Blue Shift</h3>
                         <p class="card-text">Step into the security guard boots of Barney Calhoun as you fight to secure escape routes for Black Mesa scientists.</p>
-                        <span class="card-tag">dir: bshift</span>
+                        <div class="card-tag-wrapper">
+                            <span class="card-tag">dir: bshift</span>
+                        </div>
                     </div>
                 </div>
 
@@ -615,15 +639,23 @@
                     <div class="card-content">
                         <h3 class="card-title">Opposing Force</h3>
                         <p class="card-text">Play as Corporate Soldier Adrian Shephard sent to handle weapon systems and neutralize dangerous alien threat assets.</p>
-                        <span class="card-tag">dir: gearbox</span>
+                        <div class="card-tag-wrapper">
+                            <span class="card-tag">dir: gearbox</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="card">
+                    <img class="card-banner-img" 
+                         src="8492226536086d8996649a8fbbd75e0f.jpg" 
+                         onerror="this.onerror=null; this.src='https://images.squarespace-cdn.com/content/v1/660c6d5b0be20126a1caeb38/cbf260a4-3705-4c07-ba7a-9730f7be52ba/8492226536086d8996649a8fbbd75e0f.jpg';" 
+                         alt="Afraid of Monsters Custom Banner">
                     <div class="card-content">
                         <h3 class="card-title">Afraid of Monsters DC</h3>
                         <p class="card-text">A classic creepy conversion based inside a surreal, nightmarish hospital layout. Extreme intense atmosphere options.</p>
-                        <span class="card-tag">dir: aomdc</span>
+                        <div class="card-tag-wrapper">
+                            <span class="card-tag">dir: aomdc</span>
+                        </div>
                     </div>
                 </div>
 
@@ -631,7 +663,9 @@
                     <div class="card-content">
                         <h3 class="card-title">USS Darkstar</h3>
                         <p class="card-text">Command survival operations tracking containment hazards inside a massive research ship lightyears away.</p>
-                        <span class="card-tag">dir: darkstar</span>
+                        <div class="card-tag-wrapper">
+                            <span class="card-tag">dir: darkstar</span>
+                        </div>
                     </div>
                 </div>
 
@@ -639,7 +673,9 @@
                     <div class="card-content">
                         <h3 class="card-title">Cry of Fear Mobile</h3>
                         <p class="card-text">A brutal psychological horror campaign conversion. Complete custom weapons, tracking inventory layouts, and dark atmospheric cities.</p>
-                        <span class="card-tag">dir: cof</span>
+                        <div class="card-tag-wrapper">
+                            <span class="card-tag">dir: cof</span>
+                        </div>
                     </div>
                 </div>
 
@@ -647,7 +683,9 @@
                     <div class="card-content">
                         <h3 class="card-title">Counter-Strike 1.6</h3>
                         <p class="card-text">The legendary classic tactical multi-player framework port running smoothly alongside standard touch configurations.</p>
-                        <span class="card-tag">dir: cstrike</span>
+                        <div class="card-tag-wrapper">
+                            <span class="card-tag">dir: cstrike</span>
+                        </div>
                     </div>
                 </div>
 
@@ -655,7 +693,9 @@
                     <div class="card-content">
                         <h3 class="card-title">They Hunger</h3>
                         <p class="card-text">A massive retro zombie singleplayer campaign. Fight through post-apocalyptic towns, secret laboratories, and swamps.</p>
-                        <span class="card-tag">dir: hunger</span>
+                        <div class="card-tag-wrapper">
+                            <span class="card-tag">dir: hunger</span>
+                        </div>
                     </div>
                 </div>
 
@@ -663,7 +703,9 @@
                     <div class="card-content">
                         <h3 class="card-title">Paranoia</h3>
                         <p class="card-text">Play as a Russian alpha tactical operative handling classified anomalies inside an industrial underground base.</p>
-                        <span class="card-tag">dir: paranoia</span>
+                        <div class="card-tag-wrapper">
+                            <span class="card-tag">dir: paranoia</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -690,13 +732,13 @@
         <div class="showcase-title">Official Site Banner</div>
         <div class="pfp-wrapper" onclick="playPfpInteraction()">
             <div class="pfp-bubble" id="pfp-text-bubble">HAVE GOOD DAY</div>
-            <img class="showcase-image" src="88031367717140607.jpg" alt="Mr. Balls Official Banner by MrArab">
+            <img class="showcase-image" src="88031367717140607.jpg" onerror="this.src='https://placehold.co/400x400/0b0b0b/f57c00?text=Official+Banner'" alt="Official Site Banner by MrArab">
         </div>
     </div>
 
     <div class="cat-container" id="interactive-cat" onclick="meowTalk()">
         <div class="speech-bubble" id="cat-bubble">HI</div>
-        <img class="cat-gif" id="cat-img" src="93210-cat-wave.gif" alt="Waving Cat Animation">
+        <img class="cat-gif" id="cat-img" src="93210-cat-wave.gif" onerror="this.src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWdtcmM3Ym1wYTBwZDFpMmszd3U0NmdicmptN3p5MTB3aG9zbmwwNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/MDJ9IbxxvDUQM/giphy.gif'" alt="Waving Cat Animation">
     </div>
 
     <footer>
@@ -708,13 +750,11 @@
         let bubbleTimeout;
         let pfpTimeout;
 
-        // Run setup features on document loading sequence
         window.addEventListener('DOMContentLoaded', () => {
             setupVisitorCount();
             fetchDiscordWidgetData();
         });
 
-        // Simulates an interactive visitor count engine using localStorage
         function setupVisitorCount() {
             const visitorField = document.getElementById('visitor-field');
             let dynamicViews = localStorage.getItem('site_counter');
@@ -730,7 +770,6 @@
             visitorField.innerText = formattedString;
         }
 
-        // Fetches your real-time Discord Server Widget data natively via Discord's public API
         function fetchDiscordWidgetData() {
             const inviteCode = "yYtuhWJz"; 
             fetch(`https://discord.com/api/v9/invites/${inviteCode}?with_counts=true`)
@@ -741,7 +780,6 @@
                         const online = data.approximate_presence_count;
                         const offline = total - online;
 
-                        // Inject dynamic calculations directly into pixel grid fields
                         document.getElementById('discord-total').innerText = total;
                         document.getElementById('discord-online').innerText = online;
                         document.getElementById('discord-offline').innerText = offline >= 0 ? offline : 0;
@@ -755,20 +793,17 @@
                 });
         }
 
-        // Graceful fallback values placeholder if Discord widget API requests hit rate-limiting caps
         function fallbackDiscordCounters() {
             document.getElementById('discord-total').innerText = "142";
             document.getElementById('discord-online').innerText = "38";
             document.getElementById('discord-offline').innerText = "104";
         }
 
-        // Action function to hide the welcome text wrapper when clicked
         function dismissWelcomeBar() {
             const welcomeBar = document.getElementById('welcome-bar');
             welcomeBar.classList.add('hidden-welcome');
         }
 
-        // Web Audio API Synthesizer to create an authentic cat meow sound without needing external audio files
         function playMeowSound() {
             try {
                 const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -780,13 +815,11 @@
                 
                 osc.type = 'triangle';
                 
-                // Frequency configuration mimicking a cat's inflection pitch bend up and drop down
                 const now = ctx.currentTime;
                 osc.frequency.setValueAtTime(650, now);
                 osc.frequency.exponentialRampToValueAtTime(850, now + 0.15);
                 osc.frequency.exponentialRampToValueAtTime(500, now + 0.4);
                 
-                // Audio level adjustments fading out gracefully at the end
                 gain.gain.setValueAtTime(0.2, now);
                 gain.gain.linearRampToValueAtTime(0.15, now + 0.15);
                 gain.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
@@ -797,58 +830,40 @@
                 osc.start(now);
                 osc.stop(now + 0.4);
             } catch (e) {
-                console.log("Audio play blocked or not supported by browser initial click limits.");
+                console.log("Audio layout blocked by initial user interaction flags.");
             }
         }
         
-        // Interaction handler for the Profile Picture Showcase
         function playPfpInteraction() {
             const pfpBubble = document.getElementById('pfp-text-bubble');
-            
             clearTimeout(pfpTimeout);
-            
-            // 1. Play synthesized cat meow
             playMeowSound();
-            
-            // 2. Show the "HAVE GOOD DAY" pixel typography bubble
             pfpBubble.classList.add('show');
-            
-            // Hide the text bubble dynamically after 2.5 seconds
             pfpTimeout = setTimeout(() => {
                 pfpBubble.classList.remove('show');
             }, 2500);
         }
 
-        // Cat Speak Scripting Logic
         function meowTalk() {
             const catContainer = document.getElementById('interactive-cat');
             const bubble = document.getElementById('cat-bubble');
-            
             clearTimeout(bubbleTimeout);
-            
-            // Pause movement path while text bubble pops up
             catContainer.classList.add('paused');
             bubble.classList.add('show');
-            
-            // Automatically hide text bubble after 2 seconds and continue walking
             bubbleTimeout = setTimeout(() => {
                 bubble.classList.remove('show');
                 catContainer.classList.remove('paused');
             }, 2000);
         }
 
-        // Dynamic Card Load More Scripting Logic
         function loadMoreMods() {
             const hiddenCards = document.querySelectorAll('.card.hidden');
             const loadMoreBtn = document.getElementById('load-more-btn');
-            
             hiddenCards.forEach(card => {
                 card.classList.remove('hidden');
             });
-            
             loadMoreBtn.style.display = 'none';
         }
     </script>
-
 </body>
 </html>
